@@ -6,7 +6,7 @@ import kareltherobot.*;
 /**
  * Write a description of class Template here.
  * 
- * @author (your name) 
+ * @author (Milan Oppermann) 
  * @version (a version number or a date)
  */
 public class DoubleBot extends Robot
@@ -22,8 +22,26 @@ public class DoubleBot extends Robot
     }
 
     public void doubleBeepers()
+    
     {
-        // put your code here
+        //
+        while (frontisclear()) {
+        }
+            pickBeepers();
+       
         
     }
+    
+    public void frontisclear() 
+        faceEast();
+    while (faceEast() && nextToABeeper()) {
+            move();
+            pickB}
+        
+    
+    public void facingEast();
+    
+    
+    
 }
+
