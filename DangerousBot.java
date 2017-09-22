@@ -19,7 +19,7 @@ public class DangerousBot extends Robot
     public void countBeeper() {
         int count=0;
         while (nextToABeeper()) 
-        karel.pickBeeper();
+        DangerousBot.pickBeeper();
         count++;// count # of Beepers 
         if (count%2==0)
           { 
@@ -31,7 +31,7 @@ public class DangerousBot extends Robot
         }
     
         for ( int i = 0; i<count;i++) {
-            karel.putBeeper();  
+            DangerousBot.putBeeper();  
     }
 }
 }
