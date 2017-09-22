@@ -25,23 +25,25 @@ public class DoubleBot extends Robot
     
     {
         //
-        while (frontisclear()) {
-        }
-            pickBeepers();
-       
-        
+         while (frontIsClear() && !nextToABeeper()) {
+        move();
+   
     }
-    
-    public void frontisclear() 
-        faceEast();
-    while (faceEast() && nextToABeeper()) {
-            move();
-            pickB}
-        
-    
-    public void facingEast();
-    
-    
-    
 }
+
+    public void faceNorth() 
+    {
+    
+     while(!faceNorth){
+        turnLeft();
+    }
+}
+
+
+
+}
+ 
+    
+    
+
 
