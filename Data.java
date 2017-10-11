@@ -4,7 +4,7 @@ import kareltherobot.*;
 /**
  * Write a description of class Template here.
  * 
- * @author (your name) 
+ * @author (Milan Oppermann) 
  * @version (a version number or a date)
  */
 public class Data extends Robot
@@ -22,7 +22,7 @@ public class Data extends Robot
         beepers = numBeepers;
     }
 
-    public int getStreet()
+    public int goStreet()
     {
         // put your code here
         return this.street;

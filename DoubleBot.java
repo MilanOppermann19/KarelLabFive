@@ -13,6 +13,7 @@ public class DoubleBot extends Robot
 {
     // instance variables - replace the example below with your own
     public int beepers;
+    public int twiceTheBeepers;
 
     /**
      * Constructor for objects of class Template
@@ -22,28 +23,37 @@ public class DoubleBot extends Robot
     }
 
     public void doubleBeepers()
-    
     {
-        //
-         while (frontIsClear() && !nextToABeeper()) {
+        fetchBeepers();
+        pickUpBeepers();
+        placeBeepers();
+        }
+        public void placeBeepers() {
+        int i;
+        for (i = 0; i < beepers;  i++) {
+            putBeeper();
+        }
         move();
-   
+        twiceTheBeepers = beepers * 2;
+        for (i = 0; i < twiceTheBeepers; i++) {
+            putBeeper();
+        }
+        move();
     }
-}
-
-    public void faceNorth() 
-    {
-    
-     while(!faceNorth){
-        turnLeft();
+    public void pickUpBeepers() {
+        while (nextToABeeper()) {
+            pickBeeper();
+            beepers++;
+        }
     }
-}
-
-
-
-}
- 
+    public void fetchBeepers() {
+        while (!nextToABeeper()) {
+            move();
+        }
+    }
     
     
-
+}
+        
+        
 

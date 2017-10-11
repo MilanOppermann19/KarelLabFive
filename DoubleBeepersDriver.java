@@ -1,6 +1,6 @@
 
 /**
-   @Author:
+   @Author:Milan Oppermann
       Date:
    Teacher: Appel
   */
@@ -10,9 +10,9 @@ import java.awt.Color;
 public class DoubleBeepersDriver implements Directions
 {
     public static void main(String args[])  {
-        DoubleBot karel = new DoubleBot(1, 1, East, -1);  
-        karel.doubleBeepers();
-        karel.turnOff();  
+        DoubleBot Apple = new DoubleBot(1, 1, East, -1);  
+        Apple.doubleBeepers();
+        Apple.turnOff();  
     } 
 
     static {
@@ -22,7 +22,7 @@ public class DoubleBeepersDriver implements Directions
         World.setBeeperColor(Color.black);
         World.setStreetColor(Color.gray);
         World.setNeutroniumColor(Color.black);
-        World.setDelay(10);  
+        World.setDelay(3);  
         World.setVisible(true);
     }
 }

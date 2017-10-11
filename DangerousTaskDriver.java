@@ -1,6 +1,6 @@
 
 /**
-   @Author:
+   @Author:Milan Oppermann
       Date:
    Teacher: Appel
   */
@@ -13,8 +13,6 @@ public class DangerousTaskDriver implements Directions
         DangerousBot karel = new DangerousBot(5, 5, North, 0);  
         karel.choosePile();
         karel.turnOff();  
-        karel.pickBeeper();
-        karel.countBeeper();
     } 
 
     static {

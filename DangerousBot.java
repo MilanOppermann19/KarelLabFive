@@ -3,37 +3,59 @@ import kareltherobot.*;
 
 
 /**
- * @author :  D. Appel
+ * @author : Milan Oppermann
  */
 public class DangerousBot extends Robot
 {
     public DangerousBot(int st, int av, Direction dir, int numBeepers) {
         super(st, av, dir, numBeepers);
     }
+    public int beepers;
     
     public void choosePile() {
-       countBeeper(); 
-        
+        evenOrOdd();
+        pickUpBeepers();
     }
-    
-    public void countBeeper() {
-        int count=0;
-        while (nextToABeeper()) 
-        DangerousBot.pickBeeper();
-        count++;// count # of Beepers 
-        if (count%2==0)
-          { 
-            //the count is even
+   
+    public void moveEast() {
+        faceEast();
+        while (frontIsClear()) {
+            move();
         }
-        else
-        {
-            //the count is odd
+   }
+   public void evenOrOdd() {
+       while (nextToABeeper()) {
+           pickBeeper();
+           beepers++;
         }
-    
-        for ( int i = 0; i<count;i++) {
-            DangerousBot.putBeeper();  
+       if (beepers % 2 == 0) {
+           moveEast();
+        }
+        else {
+            moveWest();
+        }
     }
+    public void moveWest(){
+    faceWest();
+    while (frontIsClear()) {
+        move();
+    }
+   }
+    public void pickUpBeepers() {
+        while (nextToABeeper()) {
+            pickBeeper();
+        }
+    }
+   public void faceEast() {
+       while (!facingEast()) {
+           turnLeft();
+        }
+    }
+    public void faceWest() {
+        while (!facingWest()) {
+            turnLeft();
+        }
+    }
+   
 }
-}
-
 
